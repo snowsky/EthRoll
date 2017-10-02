@@ -1,0 +1,108 @@
+Compiling ./contracts/eth.sol...
+
+Compilation warnings encountered:
+
+/Users/Tommy_Creatine/working/ethRoll/contracts/eth.sol:1241:31: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (!safeToAdd(a, b)) throw;
+                              ^---^
+,/Users/Tommy_Creatine/working/ethRoll/contracts/eth.sol:1250:36: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (!safeToSubtract(a, b)) throw;
+                                   ^---^
+,/Users/Tommy_Creatine/working/ethRoll/contracts/eth.sol:1265:230: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if(((((_betSize * (100-(safeSub(_playerNumber,1)))) / (safeSub(_playerNumber,1))+_betSize))*houseEdge/houseEdgeDivisor)-_betSize > maxProfit || _betSize < minBet || _playerNumber < minNumber || _playerNumber > maxNumber) throw;        
+                                                                                                                                                                                                                                     ^---^
+,/Users/Tommy_Creatine/working/ethRoll/contracts/eth.sol:1273:32: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if(gamePaused == true) throw;
+                               ^---^
+,/Users/Tommy_Creatine/working/ethRoll/contracts/eth.sol:1281:35: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if(payoutsPaused == true) throw;
+                                  ^---^
+,/Users/Tommy_Creatine/working/ethRoll/contracts/eth.sol:1289:49: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (msg.sender != oraclize_cbAddress()) throw;
+                                                ^---^
+,/Users/Tommy_Creatine/working/ethRoll/contracts/eth.sol:1297:35: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+         if (msg.sender != owner) throw;
+                                  ^---^
+,/Users/Tommy_Creatine/working/ethRoll/contracts/eth.sol:1305:38: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+         if (msg.sender != treasury) throw;
+                                     ^---^
+,/Users/Tommy_Creatine/working/ethRoll/contracts/eth.sol:1425:50: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if(maxPendingPayouts >= contractBalance) throw;
+                                                 ^---^
+,/Users/Tommy_Creatine/working/ethRoll/contracts/eth.sol:1442:39: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (playerAddress[myid]==0x0) throw;
+                                      ^---^
+,/Users/Tommy_Creatine/working/ethRoll/contracts/eth.sol:1636:43: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if(newMaxProfitAsPercent > 10000) throw;
+                                          ^---^
+,/Users/Tommy_Creatine/working/ethRoll/contracts/eth.sol:1656:34: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if(!sendTo.send(amount)) throw;
+                                 ^---^
+,/Users/Tommy_Creatine/working/ethRoll/contracts/eth.sol:1674:50: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if(!sendTo.send(originalPlayerBetValue)) throw;
+                                                 ^---^
+,/Users/Tommy_Creatine/working/ethRoll/contracts/eth.sol:772:9: Warning: This declaration shadows an existing declaration.
+        uint len;
+        ^------^
+/Users/Tommy_Creatine/working/ethRoll/contracts/eth.sol:678:5: The shadowed declaration is here:
+    function len(slice self) internal returns (uint) {
+    ^
+Spanning multiple lines.
+
+,/Users/Tommy_Creatine/working/ethRoll/contracts/eth.sol:821:9: Warning: This declaration shadows an existing declaration.
+        uint len;
+        ^------^
+/Users/Tommy_Creatine/working/ethRoll/contracts/eth.sol:678:5: The shadowed declaration is here:
+    function len(slice self) internal returns (uint) {
+    ^
+Spanning multiple lines.
+
+,/Users/Tommy_Creatine/working/ethRoll/contracts/eth.sol:1168:64: Warning: This declaration shadows an existing declaration.
+    function count(slice self, slice needle) internal returns (uint count) {
+                                                               ^--------^
+/Users/Tommy_Creatine/working/ethRoll/contracts/eth.sol:1168:5: The shadowed declaration is here:
+    function count(slice self, slice needle) internal returns (uint count) {
+    ^
+Spanning multiple lines.
+
+,/Users/Tommy_Creatine/working/ethRoll/contracts/eth.sol:1214:9: Warning: This declaration shadows an existing declaration.
+        uint len = self._len * (parts.length - 1);
+        ^------^
+/Users/Tommy_Creatine/working/ethRoll/contracts/eth.sol:678:5: The shadowed declaration is here:
+    function len(slice self) internal returns (uint) {
+    ^
+Spanning multiple lines.
+
+,/Users/Tommy_Creatine/working/ethRoll/contracts/eth.sol:822:9: Warning: Variable is shadowed in inline assembly by an instruction of the same name
+        uint div = 2 ** 248;
+        ^------^
+,/Users/Tommy_Creatine/working/ethRoll/contracts/eth.sol:996:21: Warning: Jump instructions are low-level EVM features that can lead to incorrect stack access. Because of that they are discouraged. Please consider using "switch" or "for" statements instead.
+                    jumpi(exit, eq(and(mload(ptr), mask), needledata))
+                    ^---^
+,/Users/Tommy_Creatine/working/ethRoll/contracts/eth.sol:998:21: Warning: Jump instructions are low-level EVM features that can lead to incorrect stack access. Because of that they are discouraged. Please consider using "switch" or "for" statements instead.
+                    jumpi(loop, lt(sub(ptr, 1), end))
+                    ^---^
+,/Users/Tommy_Creatine/working/ethRoll/contracts/eth.sol:1033:21: Warning: Jump instructions are low-level EVM features that can lead to incorrect stack access. Because of that they are discouraged. Please consider using "switch" or "for" statements instead.
+                    jumpi(ret, eq(and(mload(ptr), mask), needledata))
+                    ^---^
+,/Users/Tommy_Creatine/working/ethRoll/contracts/eth.sol:1035:21: Warning: Jump instructions are low-level EVM features that can lead to incorrect stack access. Because of that they are discouraged. Please consider using "switch" or "for" statements instead.
+                    jumpi(loop, gt(add(ptr, 1), selfptr))
+                    ^---^
+,/Users/Tommy_Creatine/working/ethRoll/contracts/eth.sol:1037:21: Warning: Jump instructions are low-level EVM features that can lead to incorrect stack access. Because of that they are discouraged. Please consider using "switch" or "for" statements instead.
+                    jump(exit)
+                    ^--^
+,/Users/Tommy_Creatine/working/ethRoll/contracts/eth.sol:78:34: Warning: Unused local variable
+    function oraclize_setNetwork(uint8 networkID) internal returns(bool){
+                                 ^-------------^
+,/Users/Tommy_Creatine/working/ethRoll/contracts/eth.sol:109:25: Warning: Unused local variable
+    function __callback(bytes32 myid, string result, bytes proof) {
+                        ^----------^
+,/Users/Tommy_Creatine/working/ethRoll/contracts/eth.sol:109:39: Warning: Unused local variable
+    function __callback(bytes32 myid, string result, bytes proof) {
+                                      ^-----------^
+,/Users/Tommy_Creatine/working/ethRoll/contracts/eth.sol:109:54: Warning: Unused local variable
+    function __callback(bytes32 myid, string result, bytes proof) {
+                                                     ^---------^
+
+Writing artifacts to ./build/contracts
+
